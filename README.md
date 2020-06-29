@@ -13,7 +13,7 @@ La implementación se baso en la creación de multiples micro servicios, cada un
 
 ### Ejecución
 
-Situarse en el directorio padre y ejecutar:
+En una consola de comandos, situarse en el directorio padre y ejecutar:
 
 ```sh
 $ docker-compose up
