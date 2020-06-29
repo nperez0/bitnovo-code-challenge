@@ -11,7 +11,7 @@ La arquitectura escogida para el desarrollo fue DDD en su forma básica, se creo
 
 Para la parte de acceso de datos se utilizo postgres.
 
-Para la comunicación entre microservicios se crearon apis para realizar consultar y un bus de mensajes para comunicarse mediante la publicación de eventos.
+Para la comunicación entre microservicios se crearon APIs para realizar consultas y se implementó un bus de mensajes para comunicarse mediante la publicación de eventos.
 
 ### Requerimientos
 
