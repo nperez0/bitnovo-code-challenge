@@ -6,6 +6,12 @@ La implementación se baso en la creación de multiples micro servicios, cada un
 - [ ] IdentityService: Cubré toda la parte de autenticación 
 - [x] Customers: Contiene toda la lógica para la administración de clientes
 - [x] Banking: Contiene toda la lógica para la administración de cuentas
+ 
+La arquitectura escogida para el desarrollo fue DDD en su forma básica, se creo una capa de dominio donde se maneja todas reglas de negocio como es el caso de hacer transferencias.
+
+Para la parte de acceso de datos se utilizo postgres.
+
+Para la comunicación entre microservicios se crearon apis para realizar consultar y un bus de mensajes para comunicarse mediante la publicación de eventos.
 
 ### Requerimientos
 
@@ -34,3 +40,4 @@ http://localhost:8081/swagger
 - [x] Swagger
 - [x] Postgres
 - [x] AutoMapper
+- [ ] Redis
