@@ -41,3 +41,4 @@ http://localhost:8081/swagger
 - [x] Postgres
 - [x] AutoMapper
 - [ ] Redis
+- [ ] Health Checks
