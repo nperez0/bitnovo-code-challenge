@@ -35,7 +35,7 @@ http://localhost:8081/swagger
 
 - [x] Ocelot
 - [x] Log4Net
-- [ ] RabitMQ
+- [ ] RabbitMQ
 - [ ] JWT
 - [x] Swagger
 - [x] Postgres
