@@ -2,10 +2,10 @@
 
 La implementación se baso en la creación de multiples micro servicios, cada uno con la finalidad de crear contextos limitados separandolos por modulos:
 
-* ApiGateway : Sirve como servicio de fachada para conectarse con el resto de micro servicios
-* IdentityService [Pendiente]: Cubré toda la parte de autenticación 
-* Customers: Contiene toda la lógica para la administración de clientes
-* Banking: Contiene toda la lógica para la administración de cuentas
+- [x] ApiGateway : Sirve como servicio de fachada para conectarse con el resto de micro servicios
+- [ ] IdentityService: Cubré toda la parte de autenticación 
+- [x] Customers: Contiene toda la lógica para la administración de clientes
+- [x] Banking: Contiene toda la lógica para la administración de cuentas
 
 ### Requerimientos
 
