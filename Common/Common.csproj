@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>Bitnovo.Common</AssemblyName>
+    <RootNamespace>Bitnovo.Common</RootNamespace>
+  </PropertyGroup>
+
+</Project>

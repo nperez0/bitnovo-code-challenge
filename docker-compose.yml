@@ -1,0 +1,59 @@
+version: '3.4'
+
+networks:
+  bitnovo-dev:
+    driver: bridge
+
+services:
+  apiGateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    networks:
+      - bitnovo-dev
+
+  customers.api:
+    image: ${DOCKER_REGISTRY-}customersapi
+    depends_on:
+      - "postgres_image"
+    build:
+      context: .
+      dockerfile: Customers.Api/Dockerfile
+    networks:
+      - bitnovo-dev
+
+  banking.api:
+    image: ${DOCKER_REGISTRY-}bankingapi
+    depends_on:
+      - "postgres_image"
+    build:
+      context: .
+      dockerfile: Banking.Api/Dockerfile
+    networks:
+      - bitnovo-dev
+
+  postgres_image:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - db_volume:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "1234"
+      POSTGRES_DB: "Bitnovo"
+    networks:
+      - bitnovo-dev
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    networks:
+      - bitnovo-dev
+
+volumes:
+  db_volume:

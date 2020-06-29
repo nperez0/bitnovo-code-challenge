@@ -1,0 +1,67 @@
+{
+  "ReRoutes": [
+    // customers api config
+    {
+      "DownstreamPathTemplate": "/api/customers/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "customers.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/customers/{everything}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "SwaggerKey": "customers"
+    },
+    // banking api config
+    {
+      "DownstreamPathTemplate": "/api/banking/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "banking.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/banking/{everything}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "SwaggerKey": "banking"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "customers",
+      "Config": [
+        {
+          "Name": "Customers API",
+          "Version": "v1",
+          "Url": "http://customers.api/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "banking",
+      "Config": [
+        {
+          "Name": "Banking API",
+          "Version": "v1",
+          "Url": "http://banking.api/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    
+  }
+}
